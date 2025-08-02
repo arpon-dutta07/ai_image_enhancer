@@ -20,7 +20,7 @@ const UploadImageHandler = async (file)=>
   try
   {
     const enhancedURL = await enhancedImageAPI(file);
-    setEnhancedImage (enhancedURL); 
+    setEnhancedImage(enhancedURL);
     setloading(false);
   }
   catch (error) 
