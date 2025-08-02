@@ -1,11 +1,12 @@
 import React from 'react'
 import './App.css'
 import Home from './components/Home'
+import Footer from './components/Footer'
+
 
 const App = () => {
   return (
     <div className='flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-50 py-8 px-4 relative overflow-hidden'>
-       
        {/* Animated Background Elements */}
        <div className="absolute inset-0 overflow-hidden pointer-events-none">
          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -36,6 +37,7 @@ const App = () => {
               <span className="animate-pulse">⚡</span>
             </div>
         </div>
+        <Footer/>
     </div>
   )
 }
