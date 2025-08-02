@@ -32,14 +32,19 @@ const UploadImageHandler = async (file)=>
 }
 
   return (
-    <>
-        <ImageUpload  UploadImageHandler={UploadImageHandler}/>
+    <div className="w-full max-w-7xl mx-auto px-4 space-y-8">
+        {/* Upload Section at Top */}
+        <div className="flex justify-center">
+          <ImageUpload UploadImageHandler={UploadImageHandler}/>
+        </div>
+        
+        {/* Image Preview Section Below */}
         <ImagePreview
           loading={loading}
           uploaded={uploadImage}
           enhanced={enhancedImage?.image}
         />
-    </>
+    </div>
   )
 }
 
