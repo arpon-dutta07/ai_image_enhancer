@@ -26,7 +26,7 @@ const ImagePreview = (props) => {
             {/* Image preview section - Always visible */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
                 {/* Original Image */}
-                <div className="glass hover-lift rounded-2xl overflow-hidden shadow-2xl border border-white/20 animate-slide-in-left">
+                <div className="glass hover-lift rounded-2xl overflow-hidden shadow-2xl border border-white/30 animate-slide-in-left bg-white/10">
                     <div className="relative">
                         <h2 className="text-lg md:text-xl font-bold text-center bg-gradient-to-r from-gray-700 to-gray-900 text-white py-3 md:py-4 relative overflow-hidden">
                             <span className="relative z-10">📷 Original Image</span>
@@ -44,20 +44,20 @@ const ImagePreview = (props) => {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                     ) : (
-                        <div className="flex flex-col items-center justify-center h-64 md:h-80 lg:h-96 bg-gradient-to-br from-gray-100 to-gray-200">
+                        <div className="flex flex-col items-center justify-center h-64 md:h-80 lg:h-96 bg-gradient-to-br from-gray-700/50 to-gray-800/50">
                             <div className="animate-float">
-                                <svg className="w-12 md:w-16 h-12 md:h-16 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-12 md:w-16 h-12 md:h-16 text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
                             </div>
-                            <span className="text-gray-500 font-medium text-sm md:text-base">No Image Selected</span>
+                            <span className="text-gray-300 font-medium text-sm md:text-base">No Image Selected</span>
                         </div>
                     )}
                 </div>
 
                 {/* Enhanced Image and Download Button */}
                 <div className="space-y-4 md:space-y-6">
-                    <div className="glass hover-lift rounded-2xl overflow-hidden shadow-2xl border border-white/20 animate-slide-in-right">
+                    <div className="glass hover-lift rounded-2xl overflow-hidden shadow-2xl border border-white/30 animate-slide-in-right bg-white/10">
                         <div className="relative">
                             <h2 className="text-lg md:text-xl font-bold text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 md:py-4 relative overflow-hidden">
                                 <span className="relative z-10">✨ Enhanced Image</span>
@@ -84,13 +84,13 @@ const ImagePreview = (props) => {
                                 <Loading />
                             </div>
                         ) : (
-                            <div className="flex flex-col items-center justify-center h-64 md:h-80 lg:h-96 bg-gradient-to-br from-blue-50 to-purple-50">
+                            <div className="flex flex-col items-center justify-center h-64 md:h-80 lg:h-96 bg-gradient-to-br from-blue-500/20 to-purple-500/20">
                                 <div className="animate-float">
-                                    <svg className="w-12 md:w-16 h-12 md:h-16 text-blue-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-12 md:w-16 h-12 md:h-16 text-blue-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                     </svg>
                                 </div>
-                                <span className="text-blue-500 font-medium text-sm md:text-base">Waiting for Enhancement</span>
+                                <span className="text-blue-300 font-medium text-sm md:text-base">Waiting for Enhancement</span>
                             </div>
                         )}
                     </div>
