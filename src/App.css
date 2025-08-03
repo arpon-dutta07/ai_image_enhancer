@@ -27,6 +27,53 @@
   }
 }
 
+@keyframes text-glow {
+  0%, 100% {
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px rgba(255, 0, 255, 0.5);
+  }
+  50% {
+    text-shadow: 
+      0 0 3px currentColor,
+      0 0 8px currentColor,
+      0 0 12px rgba(0, 255, 255, 0.5);
+  }
+}
+
+@keyframes rainbow-text {
+  0% { filter: hue-rotate(0deg); }
+  25% { filter: hue-rotate(90deg); }
+  50% { filter: hue-rotate(180deg); }
+  75% { filter: hue-rotate(270deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes scale-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes letter-dance {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
 @keyframes gradient-x {
   0%, 100% {
     background-size: 200% 200%;
@@ -35,6 +82,77 @@
   50% {
     background-size: 200% 200%;
     background-position: right center;
+  }
+}
+
+@keyframes gradient-wave {
+  0%, 100% {
+    background-size: 400% 400%;
+    background-position: 0% 50%;
+  }
+  25% {
+    background-size: 400% 400%;
+    background-position: 100% 50%;
+  }
+  50% {
+    background-size: 400% 400%;
+    background-position: 100% 100%;
+  }
+  75% {
+    background-size: 400% 400%;
+    background-position: 0% 100%;
+  }
+}
+
+@keyframes bounce-letters {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  40% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  60% {
+    transform: translateY(-5px) scale(1.05);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(139, 92, 246, 0.4);
   }
 }
 
@@ -117,6 +235,30 @@
   animation: gradient-x 3s ease infinite;
 }
 
+.animate-gradient-wave {
+  animation: gradient-wave 4s ease infinite;
+}
+
+.animate-bounce-letters {
+  animation: bounce-letters 2s ease infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 8s linear infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -139,6 +281,22 @@
 
 .animate-slide-in-left {
   animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-text-glow {
+  animation: text-glow 3s ease-in-out infinite;
+}
+
+.animate-rainbow-text {
+  animation: rainbow-text 4s linear infinite;
+}
+
+.animate-scale-pulse {
+  animation: scale-pulse 2s ease-in-out infinite;
+}
+
+.animate-letter-dance {
+  animation: letter-dance 3s ease-in-out infinite;
 }
 
 /* Animation Delays */
@@ -166,6 +324,22 @@
   animation-delay: 4s;
 }
 
+.animation-delay-1500 {
+  animation-delay: 1.5s;
+}
+
+.animation-delay-1800 {
+  animation-delay: 1.8s;
+}
+
+.animation-delay-2100 {
+  animation-delay: 2.1s;
+}
+
+.animation-delay-2400 {
+  animation-delay: 2.4s;
+}
+
 /* Glassmorphism Effect */
 .glass {
   background: rgba(255, 255, 255, 0.25);
@@ -189,6 +363,26 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Visible Gradient Text */
+.visible-gradient-text {
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: white; /* Fallback color */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Clean Gradient Text */
+.clean-gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: white; /* Fallback color */
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));
 }
 
 /* Additional Utility Classes */
