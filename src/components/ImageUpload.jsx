@@ -42,14 +42,14 @@ const ImageUpload = (props) => {
   }
 
   return (
-    <div className='glass hover-lift rounded-2xl md:rounded-3xl p-4 md:p-8 w-full max-w-4xl shadow-2xl border border-white/20 backdrop-blur-xl animate-bounce-in'>
+    <div className='glass hover-lift rounded-2xl md:rounded-3xl p-4 md:p-8 w-full max-w-4xl shadow-2xl border border-white/30 backdrop-blur-xl animate-bounce-in bg-white/10'>
       
       <label 
         htmlFor="Inputfile" 
         className={`block w-full cursor-pointer border-2 border-dashed rounded-xl md:rounded-2xl p-6 md:p-12 text-center transition-all duration-500 ease-out relative overflow-hidden ${
           isDragOver 
-            ? 'border-blue-400 bg-gradient-to-br from-blue-50 to-indigo-50 scale-105 shadow-2xl' 
-            : 'border-gray-300 hover:border-blue-400 hover:bg-gradient-to-br hover:from-gray-50 hover:to-blue-50 hover:scale-102'
+            ? 'border-blue-400 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 scale-105 shadow-2xl' 
+            : 'border-gray-400 hover:border-blue-400 hover:bg-gradient-to-br hover:from-gray-500/10 hover:to-blue-500/10 hover:scale-102'
         }`}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
@@ -94,16 +94,16 @@ const ImageUpload = (props) => {
           
           <div className="space-y-2 md:space-y-3">
             <span className={`text-lg md:text-xl font-semibold transition-all duration-300 block ${
-              isDragOver ? 'text-blue-600 scale-105' : 'text-gray-700'
+              isDragOver ? 'text-blue-400 scale-105' : 'text-gray-200'
             }`}>
               {isDragOver ? '✨ Drop your image here! ✨' : '📸 Click or drag to upload your image!'}
             </span>
             
-            <div className="flex items-center justify-center gap-1 md:gap-2 text-xs md:text-sm text-gray-500 flex-wrap">
-              <span className="px-2 py-1 bg-gray-100 rounded-full">JPG</span>
-              <span className="px-2 py-1 bg-gray-100 rounded-full">PNG</span>
-              <span className="px-2 py-1 bg-gray-100 rounded-full">GIF</span>
-              <span className="px-2 py-1 bg-gray-100 rounded-full">WebP</span>
+            <div className="flex items-center justify-center gap-1 md:gap-2 text-xs md:text-sm text-gray-300 flex-wrap">
+              <span className="px-2 py-1 bg-white/20 rounded-full">JPG</span>
+              <span className="px-2 py-1 bg-white/20 rounded-full">PNG</span>
+              <span className="px-2 py-1 bg-white/20 rounded-full">GIF</span>
+              <span className="px-2 py-1 bg-white/20 rounded-full">WebP</span>
             </div>
             
             <p className="text-xs md:text-sm text-gray-400 mt-2">
